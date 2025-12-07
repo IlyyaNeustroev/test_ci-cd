@@ -35,7 +35,7 @@ def subtract():
     return str(a - b)
 
 @app.route('/power', methods=['GET'])
-def subtract():
+def power():
     try:
         a = float(request.args.get('a'))
         b = float(request.args.get('b'))
@@ -63,7 +63,7 @@ def api():
             return jsonify({'status': 'bad input'}), 400
 
 def main():
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='127.0.0.1', port=8080)
 
 if __name__ == '__main__':
     main()
