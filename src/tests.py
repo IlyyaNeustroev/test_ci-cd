@@ -68,6 +68,11 @@ class FlaskAppTests(unittest.TestCase):
         r = self.app.get('/subtract?a=5&b=3')
         self.assertEqual(r.status_code, 200)
         self.assertEqual(r.data, b'2.0')    
+    
+    def test_power_success(self):
+        r = self.app.get('/power?a=5&b=3')
+        self.assertEqual(r.status_code, 200)
+        self.assertEqual(r.data, b'125.0')       
 ##
 ###
 if __name__ == '__main__':
